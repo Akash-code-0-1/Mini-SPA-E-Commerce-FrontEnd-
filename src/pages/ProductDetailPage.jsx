@@ -9,7 +9,8 @@ function ProductDetailPage() {
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {
-    fetch("http://localhost:5000/api/products")
+    // fetch("http://localhost:5000/api/products")
+    fetch("https://mini-spa-e-commerce-backend.vercel.app/api/products")
       .then((res) => res.json())
       .then((data) => {
         const found = data.find((p) => p.id === Number(id))
